@@ -11,7 +11,9 @@ const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "troque-esta-senha";
 
 app.use(express.static(path.join(__dirname, "public")));
 app.get("/health", (_req, res) => res.json({ ok: true, service: "Conexao FM" }));
-
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 let djSocketId = null;
 let radioInfo = { name: process.env.RADIO_NAME || "Conexão FM", live: false, track: "Aguardando transmissão", listeners: 0 };
 
