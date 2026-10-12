@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f"><meta name="description" content="Ouça a Conexão FM ao vivo.">
+  <title>Conexão FM — Rádio Online</title><link rel="stylesheet" href="/style.css">
+</head>
+<body class="listener-page">
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">♫</span><span id="radioName">CONEXÃO <b>FM</b><small>RÁDIO ONLINE</small></span></a><a class="admin-link" href="/admin.html">Painel do DJ ↗</a></header>
+  <main class="listener-wrap">
+    <div class="live-pill"><span class="pulse"></span><span id="liveLabel">AGUARDANDO TRANSMISSÃO</span></div>
+    <section class="radio-card">
+      <div class="cover-art"><div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="cover-note">♫</div></div>
+      <p class="eyebrow">VOCÊ ESTÁ OUVINDO</p>
+      <h1 id="trackTitle">Conexão FM</h1><p class="subtext" id="trackSub">Sua rádio, sua conexão.</p>
+      <audio id="remoteAudio" autoplay playsinline></audio>
+      <button id="listenBtn" class="primary-btn big-btn">▶ &nbsp; Ouvir ao vivo</button>
+      <p id="listenMessage" class="status-message">Toque para conectar e liberar o áudio.</p>
+      <div class="listener-count"><span>●</span> <b id="listenerCount">0</b> ouvintes conectados</div>
+    </section>
+    <section class="share-card"><div><p class="eyebrow">ESPALHE A CONEXÃO</p><h2>Compartilhe a rádio</h2><p class="subtext">Mande o link para seus amigos ouvirem de qualquer lugar.</p></div><div class="share-row"><input id="shareUrl" readonly aria-label="Link da rádio"><button id="copyBtn" class="secondary-btn">Copiar link</button><button id="shareBtn" class="secondary-btn">Compartilhar</button></div><p id="copyMessage" class="status-message"></p></section>
+  </main>
+  <footer>CONEXÃO FM <span>•</span> Música e companhia, onde você estiver.</footer>
+  <script src="/socket.io/socket.io.js"></script><script src="/listener.js"></script>
+</body></html>
